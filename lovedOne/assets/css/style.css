@@ -1,0 +1,756 @@
+/* importing media queries */
+
+@import url('media-queries.css');
+
+/* importing back-btn styling */
+
+@import url('post.css');
+
+/* importing 3d-box styling */
+
+@import url('3d-box.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d1ccc0;
+  font-family: "Stardos Stencil", cursive;
+}
+
+a {
+  color: red;
+}
+
+strong{
+  font-size: 30px;
+  font-weight: 900;
+  color: red;
+}
+
+#checkbox {
+  transform: scale(2);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f10909;
+  border-radius: 45px;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  display: none;
+}
+/* =================== styling for navbar-section starts ================ */
+
+#navbar {
+  backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  font-family: "Audiowide", cursive;
+}
+
+/* ********* styling for logo starts ********** */
+
+.main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row-reverse;
+  font-family: "Bruno Ace SC", cursive;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.logo div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #f10909;
+  animation: loader45 1.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.logo div:after,
+.logo div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #f10909;
+}
+
+.logo div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.logo div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes loader45 {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/* ********* styling for logo ends *********** */
+
+/* ==================== styling for navbar-section ends ================= */
+
+/* ================= styling for hero section starts ================= */
+.hero {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+   
+}
+
+.hero-title span {
+  font-size: 45px;
+  font-weight: 900;
+  color: red;
+}
+
+.hero-title p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+/* ======== styling for hero-btn starts ========= */
+
+.hero-btn {
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  border: 2px solid #f10909;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  position: relative;
+  transition: all 0.9s ease-in-out;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.hero-btn:hover {
+  background-color: #f10909;
+  color: white;
+}
+
+.hero-btn::before {
+  content: "❤️";
+  position: absolute;
+  left: -0rem;
+  top: 0rem;
+  opacity: 1;
+  font-size: 1.55rem;
+  transition: all 0.9s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.hero-btn:hover::before {
+  content: "😘";
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(40deg);
+  font-size: 2.5rem;
+  top: -0.75rem;
+  transition: all 0.9s ease-in-out;
+  animation: rightRun 2s forwards;
+}
+
+.hero-btn:active::before {
+  content: "🥰";
+}
+
+@keyframes rightRun {
+  100% {
+    transform: translateX(140px);
+  }
+}
+
+/* ======== styling for hero-btn ends ========= */
+
+.hero-image {
+  height: 400px;
+  width: auto;
+}
+
+.hero-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* ============= styling for hero section ends ============== */
+
+/* css styling for login-section starts */
+
+/* login btn styling starts */
+
+.login-btn {
+  width: 160px;
+  height: 55px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.login-btn .button-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(252, 1, 1, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: rgb(255, 0, 0);
+}
+
+.login-btn:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(rgb(255, 0, 0), rgb(139, 0, 0));
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+
+.circle:nth-child(2) {
+  bottom: 0px;
+  right: 0px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/* login btn styling ends */
+
+/* register btn styling starts */
+
+.register-btn {
+  width: 160px;
+  height: 55px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.register-btn .button-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(252, 1, 1, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: rgb(0, 0, 0);
+}
+
+.register-btn:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.register-btn .circle {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(rgb(248, 248, 248), rgb(0, 0, 0));
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.register-btn .circle:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+
+.register-btn .circle:nth-child(2) {
+  bottom: 0px;
+  right: 0px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/* register btn styling ends */
+
+/* styling for inputs */
+
+.form-input-group input,
+select {
+  border-radius: 45px;
+  border: 1px solid black;
+  margin: 5px 10px;
+}
+
+.form-input-group input:focus {
+  box-shadow: 0 0 10px 3px black;
+}
+
+.login-container,
+.register-container {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main-form {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  overflow: scroll;
+}
+
+/* css styling for login-box ends */
+
+/* ============= styling for about section starts ============ */
+
+#about-section {
+  height: 100vh;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.intro {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow:hidden;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+.about-para{
+  padding: 50px 30px;
+   
+}
+
+.about-para h3{
+  padding: 3px;
+  font-family: "Bruno Ace SC", cursive;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 5px;
+
+  
+}
+
+
+/* ========== styling for about section ends ============= */
+
+/* ======== styling for services section starts ============ */
+
+#services-section {
+  height: 100vh;
+  width: 100%;
+}
+
+.services {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  padding: 25px;
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+.services h3 {
+  border-bottom: 3px solid #f10909;
+  padding: 2px;
+}
+/* ========== styling for services section ends =========== */
+
+/* ======== contact section starts ========== */
+
+/* #contact-section{
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  
+}
+
+.form-section{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+} */
+
+#contact-section {
+  padding: 40px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 50px;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+.map {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+.map iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+#userMessage,
+#categories {
+  border: 1px solid black;
+}
+
+#userMessage:focus,
+#categories:focus {
+  box-shadow: 0 0 10px 3px black;
+}
+/* ======== contact section ends ======== */
+/* =========== blog, create, admin, delete section starts ============ */
+
+.create-btn {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 10em;
+  background: #d90101;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.create-btn:hover {
+  animation: shake3856 0.3s linear infinite both;
+  background-color: #2f2585;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.create-form {
+  padding: 50px;
+  overflow: scroll;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+/* styling for blog video */
+
+.container-video {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Bruno Ace SC", cursive;
+}
+
+.video-text h1 {
+  font-size: 45px;
+}
+.video-text p {
+  font-size: 20px;
+}
+
+.post-image img {
+  height: 100%;
+  width: 100%;
+  margin: 5px;
+  background-position: center;
+}
+
+.post-card {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+/* styling for a main-blog post */
+
+.container-post {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.738), rgba(0, 0, 0, 0.547));
+  border-radius: 50px;
+}
+
+.container-post img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main-post-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Bruno Ace SC", cursive;
+}
+
+.main-post-text h1 {
+  font-size: 45px;
+}
+.main-post-text p {
+  font-size: 20px;
+}
+
+.post-image img {
+  height: 100%;
+  width: 100%;
+  margin: 5px;
+  background-position: center;
+}
+
+.paragraph {
+  height: 50vh;
+  width: 100%;
+  padding: 50px;
+  overflow: scroll;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+/* =========== blog, create, admin, delete section ends ============ */
+
+/* =============== styling for footer-section starts ============== */
+
+.footer {
+  height: 15vh;
+  width: 100%;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5),
+    inset 0px -12px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+.main-footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-footer p {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+/* =============== styling for footer-section ends ============== */

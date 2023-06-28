@@ -1,0 +1,131 @@
+.cube {
+  position: relative;
+  height: 200px; /* 100px * 2 */
+  width: 200px; /* 100px * 2 */
+  transform-style: preserve-3d;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube .div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px; /* 100px * 2 */
+  height: 200px; /* 100px * 2 */
+  transform-style: preserve-3d;
+}
+
+.cube .div .span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px; /* 100px * 2 */
+  height: 200px; /* 100px * 2 */
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px); /* 50px * 2 */
+  background-image: linear-gradient(
+    -45deg,
+    red,
+    #f90000,
+    #5b0000,
+    #ff0303
+  );
+  background-size: 2400% 2400%; /* 1200% * 2 */
+  animation: AnimationName 8s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.cube .div .span p {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Audiowide", cursive;
+  color: white;
+  text-align: center;
+  transform: translateZ(40px); /* 20px * 2 */
+}
+
+.cube .div .span p:nth-child(1) {
+  transform: translateZ(0) translateY(40px); /* 20px * 2 */
+  color: rgba(255, 0, 0, 0.1);
+  filter: blur(4px); /* 2px * 2 */
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px; /* 200px * 2 */
+  height: 400px; /* 200px * 2 */
+  background-image: linear-gradient(
+    -45deg,
+    #40739e,
+    #192a56,
+    #2f3640,
+    #2C3A47
+  );
+  transform: rotateX(90deg) translateZ(100px); /* 50px * 2 */
+  background-size: 2400% 2400%; /* 1200% * 2 */
+  animation: AnimationName 8s ease infinite;
+}
+
+.top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px; /* 100px * 3 */
+  height: 200px; /* 100px * 3 */
+  background-image: linear-gradient(
+    -45deg,
+    #000000,
+    #0d0d0e,
+    #030303,
+    #000000);
+  background-size: 2400% 2400%; /* 1200% * 3 */
+  animation: AnimationName 30s ease infinite;
+  box-shadow: 0 0 240px #000000, 0 0 240px #ff0000, 0 30px 240px #0008ff; /* 120px * 3 */
+  transition: box-shadow 3s;
+  transform: translateZ(-250px); /* -200px * 3 */
+  filter: blur(20px); /* 40px * 3 */
+}
+
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

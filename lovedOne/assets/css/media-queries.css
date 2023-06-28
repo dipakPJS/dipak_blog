@@ -1,0 +1,175 @@
+/* 1. Mobile Phones (Portrait): */
+
+@media only screen and (max-width: 480px) {
+
+  /* hero section starts */
+
+  #hero{
+    margin-bottom: 50px;
+    
+  }
+
+  #hero .hero-title span{
+    font-size: 35px;
+  }
+
+  #hero .hero-title h1{
+    font-size: 20px;
+  }
+
+  #hero .hero-title p{
+    font-size: 15px;
+  }
+  
+ #hero-image{
+  height: 400px;
+ }
+ 
+/* hero section ends */
+/* services section starts */
+
+ #services-section{
+  margin-top: 500px;
+    
+ }
+
+#services-section h3{
+
+font-size: 20px;
+
+}
+
+#services-section p{
+
+  font-size: 15px;
+  
+  }
+
+/* services section ends */
+ #contact-section{
+  margin-top: 300px;
+ }
+
+ .map{
+  height: 400px;
+ }
+
+  }
+
+  /* 2. Mobile Phones (Landscape): */
+
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* CSS rules for mobile phones in landscape mode */
+
+    #hero{
+      margin-bottom: 50px;
+      
+    }
+ 
+
+    #services-section{
+        margin-top: 500px;
+        
+
+    }
+
+    #contact-section{
+        margin-top: 250px;
+    }
+  }
+  
+  /* 3. Tablets (Portrait and Landscape): */
+
+  @media only screen and (min-width: 768px) and (max-width: 990px) {
+    /* CSS rules for tablets in both portrait and landscape modes */
+
+    #hero{
+      margin-bottom: 50px;
+      
+    }
+
+    /* services section starts */
+
+    #services-section{
+      margin-top: 500px;
+      
+
+  }
+
+  #services-section h3{
+
+    font-size: 20px;
+    
+    }
+    
+    #services-section p{
+    
+      font-size: 15px;
+      
+      }
+
+/* services section ends */
+     
+  }
+  
+  @media only screen and (min-width: 991px) and (max-width: 1024px) {
+    /* CSS rules for tablets in both portrait and landscape modes */
+
+    #hero{
+      margin-bottom: 50px;
+      
+    }
+
+    /* services section starts */
+
+   
+
+  #services-section h3{
+
+    font-size: 20px;
+    
+    }
+    
+    #services-section p{
+    
+      font-size: 15px;
+      
+      }
+
+/* services section ends */
+
+/* contact-section starts */
+#contact-section{
+  margin-top: -200px !important;
+}
+     
+  }
+
+  
+
+ /* 4. Small Desktops and Laptops: */ 
+
+ @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    /* CSS rules for small desktops and laptops */
+
+    #contact-section{
+      margin-top: -200px;
+    }
+  }
+
+  /* 5. Medium Desktops and Laptops: */
+
+  @media only screen and (min-width: 1367px) and (max-width: 1680px) {
+    /* CSS rules for medium desktops and laptops */
+
+    #contact-section{
+      margin-top: -200px;
+    }
+  }
+
+  /* 6. Large Desktops and High-Resolution Displays: */
+
+  @media only screen and (min-width: 1681px) {
+    /* CSS rules for large desktops and high-resolution displays */
+  }
+  
